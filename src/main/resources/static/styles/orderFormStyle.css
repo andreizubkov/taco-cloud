@@ -6,3 +6,7 @@ body {
 a:hover img {
     transform: scale(1.2);
 }
+
+.validationError {
+    color: rgba(255, 0, 0, 0.696);
+}

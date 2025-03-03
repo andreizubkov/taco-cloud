@@ -1,0 +1,23 @@
+body {
+    background: rgb(240,240,240);
+    background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(240,200,95,0.29744397759103647) 50%, rgba(245,245,245,1) 100%);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 13em;
+}
+
+.ingredient-group {
+    break-inside: avoid;
+}
+
+.name-taco {
+    text-align: center;
+}
+
+a:hover img {
+    transform: scale(1.2);
+}

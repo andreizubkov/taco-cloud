@@ -11,7 +11,8 @@
         <img th:src="@{/images/TacoCloud.png}"/>
 
         <form method="POST">
-        <button class="design-taco">Design your own taco!</button>
+            <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+            <button class="design-taco">Design your own taco!</button>
         </form>
     </body>
 </html>

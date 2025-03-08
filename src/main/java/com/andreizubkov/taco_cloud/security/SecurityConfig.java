@@ -38,6 +38,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"));
         http.headers(headers -> headers.frameOptions(f -> f.disable()));
         http.formLogin(formLogin -> formLogin.loginPage("/login").defaultSuccessUrl("/design", true));
+        http.logout(logout -> logout.logoutSuccessUrl("/"));
         return http.build();
     }
 }

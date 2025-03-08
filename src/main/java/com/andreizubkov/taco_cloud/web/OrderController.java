@@ -1,6 +1,8 @@
 package com.andreizubkov.taco_cloud.web;
 
 import jakarta.validation.Valid;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import com.andreizubkov.taco_cloud.tacos.TacoOrder;
 import com.andreizubkov.taco_cloud.data.OrderRepository;
+import com.andreizubkov.taco_cloud.security.Users;
 
 @Controller
 @RequestMapping("/orders")
@@ -29,11 +32,12 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(@Valid TacoOrder order, Errors errors, SessionStatus sessionStatus) {
+    public String processOrder(@Valid TacoOrder order, Errors errors, SessionStatus sessionStatus, @AuthenticationPrincipal Users user) {
         if (errors.hasErrors()) {
             return "orderForm";
         }
 
+        order.setUsers(user);
         orderRepo.save(order);
         sessionStatus.setComplete();
         log.info("Order submitted: {}", order);

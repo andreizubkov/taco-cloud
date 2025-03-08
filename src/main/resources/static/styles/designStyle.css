@@ -18,10 +18,57 @@ body {
     text-align: center;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 a:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: transform .5s ease;
 }
 
 .validationError {
     color: rgba(255, 0, 0, 0.696);
+}
+
+h1, h3 {
+    text-align: center;
+    color: #BF001E;
+    font-family: "Bradley Hand", cursive;
+}
+
+.checkbox {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 200px;
+    position: relative;
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 5px 0 rgb(255, 208, 147);
+    transition: 0.1s;
+    background-color: #fbe6b2;
+
+    font-size: 20px;
+    font-family: "Bradley Hand", cursive;
+    color: #BF001E;
+}
+
+button:hover {
+    background: rgb(255, 208, 147);
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+button.logout {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }

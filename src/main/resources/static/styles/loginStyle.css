@@ -1,8 +1,8 @@
 body {
+    font-family: "Bradley Hand", cursive;
+    text-align: center;
     background: rgb(240,240,240);
     background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(240,200,95,0.29744397759103647) 50%, rgba(245,245,245,1) 100%);
-
-    text-align: center;
 }
 
 img {
@@ -11,29 +11,31 @@ img {
     margin-right: auto;
 }
 
-button.design-taco {
-    margin-top: 30px;
-    padding: 20px 50px;
+a:hover img {
+    transform: scale(1.1);
+    transition: transform .5s ease;
+}
+
+h1, p {
+    color: #BF001E;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 30px;
     border: none;
-    text-decoration: none;
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 5px 0 rgb(255, 208, 147);
-    transition: 0.1s;
     background-color: #fbe6b2;
 
-    font-size: 25px;
+    font-size: 20px;
     font-family: "Bradley Hand", cursive;
     color: #BF001E;
 }
 
-button.design-taco:hover {
+button:hover {
     background: rgb(255, 208, 147);
     box-shadow: none;
     position: relative;
     top: 5px;
-}
-
-h1 {
-    font-family: "Bradley Hand", cursive;
-    color: #BF001E;
 }

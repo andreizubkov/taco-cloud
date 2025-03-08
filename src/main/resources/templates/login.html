@@ -3,11 +3,14 @@
       xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Taco Cloud</title>
+        <link rel="stylesheet" th:href="@{styles/loginStyle.css}" />
     </head>
 
     <body>
         <h1>Login</h1>
-        <img th:src="@{/images/TacoCloud.png}"/>
+        <a th:href="@{/}">
+            <img th:src="@{/images/TacoCloud.png}"/>
+        </a>
 
         <div th:if="${error}">
             Unable to login. Check your username and password.
@@ -25,7 +28,7 @@
             <label for="password">Password: </label>
             <input type="password" name="password" id="password" /><br/>
 
-            <input type="submit" value="Login"/>
+            <button>Login</button>
         </form>
     </body>
 </html>

@@ -1,12 +1,52 @@
 body {
+    text-align: center;
     background: rgb(240,240,240);
     background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(240,200,95,0.29744397759103647) 50%, rgba(245,245,245,1) 100%);
 }
 
 a:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: transform .5s ease;
 }
 
 .validationError {
     color: rgba(255, 0, 0, 0.696);
+    margin-left: 30px;
+}
+
+ul {
+    display: inline-block;
+    text-align: initial;
+}
+
+button {
+    margin-top: 5px;
+    font-family: "Bradley Hand", cursive;
+    font-size: medium;
+    color: #BF001E;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 5px 0 rgb(255, 208, 147);
+    background-color: #fbe6b2;
+
+}
+
+button:hover {
+    background: rgb(255, 208, 147);
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+h1, h3 {
+    font-family: "Bradley Hand", cursive;
+    color: #BF001E;
+}
+
+button.logout {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    border-radius: 8px;
 }

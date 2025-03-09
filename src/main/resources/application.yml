@@ -1,4 +1,8 @@
 spring:
     datasource:
+        username: admin
+        password: 123321
         generate-unique-name: false
         name: taco_cloud_database
+        url: jdbc:h2:mem:taco_cloud_database
+        driver-class-name: org.h2.Driver

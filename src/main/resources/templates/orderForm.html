@@ -77,8 +77,7 @@
             <label for="ccCVV">CVV: </label>
                 <input type="text" th:field="*{ccCVV}"/>
                 <span class="validationError"
-                    th:if="${#fields.hasErrors('ccCVV')}"
-                    th:errors="*{ccCVV}">CC CVV Error</span>
+                    th:if="${#fields.hasErrors('ccCVV')}">Invalid CVV code</span>
             <br/>
 
             <button>Submit order!</button>

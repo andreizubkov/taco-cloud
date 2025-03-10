@@ -1,5 +1,4 @@
 body {
-    font-family: "Bradley Hand", cursive;
     text-align: center;
     background: rgb(240,240,240);
     background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(240,200,95,0.29744397759103647) 50%, rgba(245,245,245,1) 100%);
@@ -38,4 +37,15 @@ button:hover {
 
 form {
     margin-top: 15px;
+}
+
+.validationError {
+    color: rgba(255, 0, 0, 0.696);
+    margin-left: 30px;
+    text-align: left;
+}
+
+h1 {
+    font-family: "Bradley Hand", cursive;
+    color: #BF001E;
 }

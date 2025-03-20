@@ -6,3 +6,14 @@ spring:
         name: taco_cloud_database
         url: jdbc:h2:mem:taco_cloud_database
         driver-class-name: org.h2.Driver
+
+server:
+    port: 8443
+    ssl:
+        key-store: C:\Program Files\Java\jdk-23\bin\taco_cloud_keys.jks
+        key-store-password: tacoCloud
+        key-password: tacoCloud
+
+logging:
+    file:
+        name: logs/TacoCloud.log

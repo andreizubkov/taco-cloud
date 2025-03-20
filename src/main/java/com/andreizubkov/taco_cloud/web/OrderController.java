@@ -27,7 +27,12 @@ public class OrderController {
     }
     
     @GetMapping("/current")
-    public String orderForm() {
+    public String orderForm(TacoOrder order, @AuthenticationPrincipal Users user) {
+        order.setDeliveryName(user.getFullname());
+        order.setDeliveryStreet(user.getStreet());
+        order.setDeliveryCity(user.getCity());
+        order.setDeliveryState(user.getState());
+        order.setDeliveryZip(user.getZip());
         return "orderForm";
     }
 

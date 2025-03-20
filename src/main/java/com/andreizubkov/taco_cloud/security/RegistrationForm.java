@@ -34,8 +34,8 @@ public class RegistrationForm {
     @NotBlank(message="Zip code is required")
     private String zip;
 
-    @Digits(integer=10, fraction=0)
-    @Size(min=10)
+    @Digits(integer=11, fraction=0)
+    @Size(min=11)
     private String phoneNumber;
 
     public Users toUser(PasswordEncoder passwordEncoder) {

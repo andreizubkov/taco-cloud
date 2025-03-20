@@ -13,6 +13,7 @@ a:hover img {
     color: rgba(255, 0, 0, 0.696);
     margin-left: 30px;
     text-align: left;
+    position: relative;
 }
 
 ul {

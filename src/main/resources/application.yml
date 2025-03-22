@@ -6,6 +6,9 @@ spring:
         name: taco_cloud_database
         url: jdbc:h2:mem:taco_cloud_database
         driver-class-name: org.h2.Driver
+    data:
+        rest:
+            base-path: /data-api
 
 server:
     port: 8443

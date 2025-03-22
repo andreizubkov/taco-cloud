@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import lombok.Data;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +18,7 @@ import jakarta.validation.constraints.Size;
 
 @Data
 @Entity
+@RestResource(rel="tacos", path="tacos")
 public class Taco {
 
     @Id

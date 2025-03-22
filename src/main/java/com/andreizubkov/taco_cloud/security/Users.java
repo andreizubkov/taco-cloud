@@ -3,6 +3,7 @@ package com.andreizubkov.taco_cloud.security;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
 @RequiredArgsConstructor
+@RestResource(rel="users", path="users")
 public class Users implements UserDetails {
 
     @Id

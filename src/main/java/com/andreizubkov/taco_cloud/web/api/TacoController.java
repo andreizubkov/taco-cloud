@@ -23,7 +23,7 @@ import com.andreizubkov.taco_cloud.data.TacoRepository;
 import com.andreizubkov.taco_cloud.tacos.Taco;
 
 @RestController
-@RequestMapping(path="/api/tacos", produces="application/json", consumes="application/json")
+@RequestMapping(path="/api/tacos", produces="application/json")
 @CrossOrigin(origins="https://tacocloud:8443")
 public class TacoController {
     
@@ -49,19 +49,19 @@ public class TacoController {
         }
     }
 
-    @PostMapping
+    @PostMapping(consumes="application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public Taco postTaco(@RequestBody Taco taco) {
         return tacoRepo.save(taco);
     }
 
-    @PutMapping("/{tacoId}")
+    @PutMapping(path="/{tacoId}", consumes="application/json")
     public Taco putTaco(@PathVariable("tacoId") Long tacoId, @RequestBody Taco taco) {
         taco.setId(tacoId);
         return tacoRepo.save(taco);
     }
 
-    @PatchMapping("/{tacoId}")
+    @PatchMapping(path="/{tacoId}", consumes="application/json")
     public Taco patchTaco(@PathVariable("tacoId") Long tacoId, @RequestBody Taco patch) {
         Taco taco = tacoRepo.findById(tacoId).get();
         if (patch.getName() != null) {
